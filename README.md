@@ -4,10 +4,10 @@ After using logistic regression for binomial classification on news data <a href
 
 Although logistic regression is originally developed for binomial classification where the output variable is dichotomous in nature, it can be used in scenario where the output variable is trichotomous or polychotomous (with more than two discrete values) as well. There are schemes such as multinomial and one –versus-rest that can be used to generalize logistic regression to make it suitable for multi-class classification.
 
-This Git post is related to the one-versus-rest scheme of using logistic regression for multi-class classification. 
+This git post is related to the one-versus-rest scheme of using logistic regression for multi-class classification. 
 
 In one-versus-rest (ovr) scheme of logistic regression, from the number of possible values of dependent/ output variable, for each distinct group of two classes, a logistic regression is fitted. This means, if we have output variable that can have three possible values A, B and C, we will have three logistic regressions fitted, one for each group AB, BC and AC. When testing a test data x, its output from each fitted logistic regression is obtained and the class with highest score will be considered the destination class for the test data, since the score is actually the probability of falling into that class given the values of x.
 
 Understanding ovr logistic regression based multi-class classification will be easier if we get our hands dirty with an example implementation. Hence, this git post.
 
-In order to better understand the implementation and visualizations, follow the blog post: <a href='' target='_blank'>here</a>.
+In order to better understand the implementation and visualizations, follow the blog post: <a href='http://rubyshrestha.com.np/2018/04/08/logistic-regression-multiclass/' target='_blank'>here</a>.
