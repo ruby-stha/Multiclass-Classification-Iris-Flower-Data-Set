@@ -80,7 +80,7 @@ def makeModelGraph():
         fig.savefig("visualizations/" + 'plot' + str(ind) + ".png")
 
 
-"""Decision boundary is the edge of hyperplane on 2d axes, that is, when the third dimension z=0
+"""Simply put, Decision Boundary is the edge of hyperplane on 2d axes, that is, when the third dimension z=0
  =>intercept_ + coeff_1 * feature_1 + coeff_2*feature2 = 0
  =>feature2 = -(intercept_ + coeff_1*feature1)/coeff_2
  This function plots test data along with decision boundaries."""
