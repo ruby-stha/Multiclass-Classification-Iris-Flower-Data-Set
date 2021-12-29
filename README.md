@@ -6,7 +6,7 @@ Although logistic regression is originally developed for binomial classification
 
 This git post is related to the one-versus-rest scheme of using logistic regression for multi-class classification. 
 
-label. This means, if we have output variable that can have three possible values A, B and C, we will have three logistic regressions fitted: (i) A vs [B, C], (ii) B vs [A, C], and (iii) C vs [A, B]. So, the number of logistic regression models fitted will be equal to the number of classes. When testing a test data x, its membership score from each fitted logistic regression is obtained and the class with highest score will be considered the destination class for the test data, since the score is actually the probability of falling into that class given the values of x.
+In the one-versus-rest (ovr) strategy of using logistic regression for multi-class classification, a binary logistic regression model is fitted for each class/output label. This means, if we have output variable that can have three possible values A, B and C, we will have three logistic regressions fitted: (i) A vs [B, C], (ii) B vs [A, C], and (iii) C vs [A, B]. So, the number of logistic regression models fitted will be equal to the number of classes. When testing a test data x, its membership score from each fitted logistic regression is obtained and the class with highest score will be considered the destination class for the test data, since the score is actually the probability of falling into that class given the values of x.
 
 Understanding multi-class classification will be easier if we try out an example implementation. Hence, this git post.
 
