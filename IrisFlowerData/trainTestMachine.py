@@ -46,7 +46,7 @@ def testMachine():
     print("Accuracy Score: ", accuracy_score(trueCategory, predictedCategory))
 
 
-"""This function simply teaches how to create a meshgrid that will be used when creating the 3d graph of hyperplane"""
+"""This function simply teaches how to create a meshgrid that will be used when creating 3d graphs"""
 def meshGrid():
     fig = plt.figure()
     x = np.arange(0, 10, 0.1)
@@ -59,12 +59,8 @@ def meshGrid():
 def getZ(x,y, params):
     return params[0] + params[1] * x + params[2] * y
 
-"""The model graphs that are being made here are the graphs of hyperplanes,
-where hyperplane is given by z = intercept_ + coeff_1 * feature_1 + coeff_2*feature2"""
-def makeModelGraph():
-    print("\n\n******************** M A K I N G    G R A P H    M O D E L ******************")
-    print("=========================Each Logistic Regression Model =========================")
-    print(eachModel)
+"""Given the logistic function g(z) = e^z / (1+e^z), where z = intercept_ + coeff_1 * feature_1 + coeff_2*feature2, this function plots the graph of z."""
+def plotModelZGraph():
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     for ind, params in enumerate(eachModel):
@@ -80,7 +76,7 @@ def makeModelGraph():
         fig.savefig("visualizations/" + 'plot' + str(ind) + ".png")
 
 
-"""Simply put, Decision Boundary is the edge of hyperplane on 2d axes, that is, when the third dimension z=0
+"""Simply put, Decision Boundary separates two classes of data in binary classification problem. It is obtained by setting z=0
  =>intercept_ + coeff_1 * feature_1 + coeff_2*feature2 = 0
  =>feature2 = -(intercept_ + coeff_1*feature1)/coeff_2
  This function plots test data along with decision boundaries."""
@@ -111,7 +107,7 @@ coefficients = multiClassLogistic.coef_
 intercepts = np.transpose([multiClassLogistic.intercept_])
 eachModel = np.concatenate((intercepts, coefficients),1)
 # meshGrid()
-makeModelGraph()
+plotModelZGraph()
 testMachine()
 
 
