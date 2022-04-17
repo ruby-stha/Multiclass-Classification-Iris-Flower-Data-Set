@@ -10,4 +10,4 @@ In the one-versus-rest (ovr) strategy of using logistic regression for multi-cla
 
 Understanding multi-class classification will be easier if we try out an example implementation. Hence, this git post.
 
-In order to better understand the implementation and visualizations, follow the blog post: <a href='https://drive.google.com/file/d/1LZ4IrrkMepUrNXenzgaD0CzQvabGdXRX/view?usp=sharing/' target='_blank'>here</a>.
+In order to better understand the implementation and visualizations, follow the article: <a href='https://drive.google.com/file/d/1LZ4IrrkMepUrNXenzgaD0CzQvabGdXRX/view?usp=sharing/' target='_blank'>here</a>.
